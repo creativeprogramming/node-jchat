@@ -1,0 +1,28 @@
+{
+  "name": "jChat",
+  "version": "0.0.0",
+  "description": "A node chat module for joomla CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "for f in tests/*; do echo \"$f\"; node $f; done; echo \"passed\"; exit 0"
+  },
+  "keywords": [
+    "npm",
+    "module",
+    "joomla"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pfitzer/node-jChat"
+  },
+  "bugs": {
+    "url": "https://github.com/pfitzer/node-jChat/issues"
+  },
+  "author": "Michael Pfister",
+  "license": "BSD",
+  "dependencies": {
+    "socket.io": "~1.0.6",
+    "express": "~4.5.1",
+    "joomla": "~2.0.1"
+  }
+}
