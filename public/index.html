@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <title>jChat</title>
+    <link href="/css/style.css" rel="stylesheet" />
+</head>
+<body>
+<div id="user">
+    <form id="userForm" action="">
+        <input type="text" id="name" autocomplete="off" /><button>Send</button>
+    </form>
+</div>
+
+<div id="chat">
+    <ul id="messages"></ul>
+    <form id="chatForm" action="">
+        <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="/js/jquery.chat.js"></script>
+<script>
+    $(document).ready(function(user) {
+        $('#chat').chat();
+    });
+</script>
+</body>
+</html>
