@@ -2,11 +2,15 @@ body {
     font: 13px Helvetica, Arial;
 }
 
+#formBox {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
 #chatForm {
     background: #000;
     padding: 3px;
-    position: fixed;
-    bottom: 0;
     width: 100%;
 }
 
@@ -61,4 +65,70 @@ body {
 #user p {
     text-align: center;
     font-weight: 700;
+}
+
+.colors {
+    width: 60%;
+    margin: 50px auto;
+}
+
+.colorbox {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    float: left;
+}
+
+#formBox .colors {
+    width: 100%;
+    margin: 0;
+}
+
+.colorbox.bold {
+    border: 2px solid;
+}
+
+.red {
+    background-color: red;
+}
+
+.darkred {
+    background-color: darkred;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.limegreen {
+    background-color: #32cd32;
+}
+
+.black {
+    background-color: #000;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.darkblue {
+    background-color: darkblue;
+}
+
+.cyan {
+    background-color: cyan;
 }
