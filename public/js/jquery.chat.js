@@ -8,6 +8,7 @@
 
         return this.each(function () {
             var c = new _chat();
+
             $(this).find('#chatForm').on('submit', function (e) {
                 c.submitMsg(this, e);
             });
@@ -19,6 +20,7 @@
         this.user = 'anonym';
 
         this.initUser();
+        this.initChat();
     }
 
     _chat.prototype = {
@@ -26,7 +28,6 @@
             event.preventDefault();
             this.socket.emit('chat message', { time: this.getTimeString(new Date()), user: this.user, msg: $('#m').val() });
             $('#m').val('');
-            this.initChat();
 
             return false;
         },
@@ -40,11 +41,11 @@
         },
         initUser: function () {
             if ('anonym' === this.user) {
-                $('#user').show();
+                $('#user-wrapper').show();
                 $('#userForm').on('submit', $.proxy(function (event) {
                     event.preventDefault();
                     this.user = $('#name').val();
-                    $('#user').hide();
+                    $('#user-wrapper').hide();
                 }, this));
             }
         },
@@ -59,5 +60,7 @@
     }
 
     // Default Optionen
-    $.fn.chat.defaults = {}
+    $.fn.chat.defaults = {
+        io: null
+    }
 })(jQuery);

@@ -39,11 +39,26 @@ body {
     background: #eee;
 }
 
+#user-wrapper {
+    background-color: limegreen;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
 #user {
+    background-color: #fff;
     width: 400px;
     height: 300px;
     border: 1px solid #000;
-    position: absolute;
-    margin: auto;
-    display: none;
+    position: relative;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+#user p {
+    text-align: center;
+    font-weight: 700;
 }

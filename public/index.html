@@ -5,12 +5,15 @@
     <link href="/css/style.css" rel="stylesheet" />
 </head>
 <body>
-<div id="user">
-    <form id="userForm" action="">
-        <input type="text" id="name" autocomplete="off" /><button>Send</button>
-    </form>
+<div id="user-wrapper">
+    <div id="user">
+        <p>please insert your username</p>
+        <form id="userForm" action="">
+            <label for="name">Username</label>
+            <input type="text" id="name" autocomplete="off" /><button>Send</button>
+        </form>
+    </div>
 </div>
-
 <div id="chat">
     <ul id="messages"></ul>
     <form id="chatForm" action="">
