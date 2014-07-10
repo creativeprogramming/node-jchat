@@ -12,7 +12,7 @@
             $(this).find('#chatForm').on('submit', function (e) {
                 c.submitMsg(this, e);
             });
-        })
+        });
     };
 
     var _chat = function () {
@@ -21,7 +21,7 @@
 
         this.initUser();
         this.initChat();
-    }
+    };
 
     _chat.prototype = {
         submitMsg: function (f, event) {
@@ -49,18 +49,16 @@
                 }, this));
             }
         },
-        getTimeString: function(time) {
-            var time = new Date(time);
+        getTimeString: function (time) {
+            var t = new Date(time);
             return '[' +
-                (time.getHours() < 10 ? '0' + time.getHours() : time.getHours())
-                + ':' +
-                (time.getMinutes() < 10 ? '0' + time.getMinutes() : time.getMinutes())
-                + '] ';
+                (t.getHours() < 10 ? '0' + t.getHours() : t.getHours()) + ':' +
+                (t.getMinutes() < 10 ? '0' + t.getMinutes() : t.getMinutes()) + '] ';
         }
-    }
+    };
 
     // Default Optionen
     $.fn.chat.defaults = {
         io: null
-    }
+    };
 })(jQuery);

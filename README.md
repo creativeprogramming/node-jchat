@@ -8,4 +8,12 @@ node-jChat
 
 * * *
 
+after checkout run
+
+    npm install
+
+to run js hinting, uglifing and js and css minifying, just run
+
+    grunt
+
 still under construction
