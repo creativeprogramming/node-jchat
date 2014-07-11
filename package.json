@@ -18,6 +18,9 @@
   "bugs": {
     "url": "https://github.com/pfitzer/node-jChat/issues"
   },
+  "scripts": {
+    "test": "grunt jshint"
+  },
   "author": "Michael Pfister",
   "license": "BSD",
   "devDependencies": {
