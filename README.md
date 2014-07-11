@@ -1,4 +1,4 @@
-node-jChat
+node-jChat ![](https://travis-ci.org/pfitzer/node-jChat.svg?branch=master)
 ==========
 
 ### node.js chat module for joomla cms
