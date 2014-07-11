@@ -4,7 +4,7 @@
   "description": "A node chat module for joomla CMS",
   "main": "index.js",
   "scripts": {
-    "test": "grunt jshint"
+    "test": "grunt jshint --verbose"
   },
   "keywords": [
     "npm",
