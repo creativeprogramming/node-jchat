@@ -4,7 +4,7 @@
   "description": "A node chat module for joomla CMS",
   "main": "index.js",
   "scripts": {
-    "test": "grunt jshint; exit 0"
+    "test": "grunt jshint"
   },
   "keywords": [
     "npm",
@@ -18,16 +18,14 @@
   "bugs": {
     "url": "https://github.com/pfitzer/node-jChat/issues"
   },
-  "scripts": {
-    "test": "grunt jshint"
-  },
   "author": "Michael Pfister",
   "license": "BSD",
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-uglify": "~0.4.0",
-    "grunt-contrib-cssmin": "~0.10.0"
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-cli": "~0.1.13"
   },
   "dependencies": {
     "socket.io": "~1.0.6",
