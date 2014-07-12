@@ -1,5 +1,4 @@
-node-jChat
-==========
+# node-jChat
 
 * * *
 
