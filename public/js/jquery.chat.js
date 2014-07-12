@@ -1,3 +1,4 @@
+
 (function ($) {
     $.fn.chat = function (options) {
         plug = $.fn.chat;
@@ -7,7 +8,7 @@
             options);
 
         return this.each(function () {
-            var c = new _chat();
+            var c = new Chat();
             $('.colorbox').click(function() {
                 c.colorChooser(this);
             });
@@ -18,7 +19,7 @@
         });
     };
 
-    var _chat = function () {
+    var Chat = function () {
         this.socket = io();
         this.user = 'anonym';
         this.color = 'blue';
@@ -28,7 +29,7 @@
         this.initChat();
     };
 
-    _chat.prototype = {
+    Chat.prototype = {
         submitMsg: function (f, event) {
             event.preventDefault();
             this.socket.emit('chat message', {
@@ -48,7 +49,7 @@
                         .text(data.time), $('<b>')
                         .text(typeof(data.user) != 'undefined' ? data.user + ': ' : ''), $('<span>')
                         .attr('style', 'color:' + data.color)
-                        .text(data.msg)
+                        .html(data.msg)
                     )
                 );
             });
