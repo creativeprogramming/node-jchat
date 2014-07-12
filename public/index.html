@@ -5,6 +5,7 @@
     <link href="/css/style.min.css" rel="stylesheet" />
 </head>
 <body>
+<header>node-jChat</header>
 <div id="user-wrapper">
     <div id="user">
         <p>please insert your username</p>
@@ -14,34 +15,34 @@
         </form>
     </div>
 </div>
-<div id="chat">
+<section id="content">
     <div class="chat-box">
         <ul id="messages"></ul>
     </div>
-    <div id="formBox">
-        <form id="chatForm" action="">
-            <input id="m" autocomplete="off" /><button>Send</button>
-        </form>
-        <div class="colors">
-            <div class="colorbox red"></div>
-            <div class="colorbox yellow"></div>
-            <div class="colorbox green"></div>
-            <div class="colorbox limegreen"></div>
-            <div class="colorbox blue"></div>
-            <div class="colorbox orange"></div>
-            <div class="colorbox black"></div>
-            <div class="colorbox gray"></div>
-            <div class="colorbox darkblue"></div>
-            <div class="colorbox cyan"></div>
-        </div>
+</section>
+<footer>
+    <form id="chatForm" action="">
+        <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+    <div class="colors">
+        <div class="colorbox red"></div>
+        <div class="colorbox yellow"></div>
+        <div class="colorbox green"></div>
+        <div class="colorbox limegreen"></div>
+        <div class="colorbox blue"></div>
+        <div class="colorbox orange"></div>
+        <div class="colorbox black"></div>
+        <div class="colorbox gray"></div>
+        <div class="colorbox darkblue"></div>
+        <div class="colorbox cyan"></div>
     </div>
-</div>
+</footer>
 <script src="/socket.io/socket.io.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="/js/jquery.chat.min.js"></script>
 <script>
     $(document).ready(function() {
-        $('#chat').chat();
+        $('body').chat();
     });
 </script>
 </body>

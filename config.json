@@ -1,0 +1,5 @@
+{
+    "welcomemsg": "Welcome to jChat!",
+    "port": "3000",
+    "timeformat": "HH:MM:ss"
+}

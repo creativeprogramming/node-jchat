@@ -33,7 +33,7 @@
         submitMsg: function (f, event) {
             event.preventDefault();
             this.socket.emit('chat message', {
-                time: this.getTimeString(new Date()),
+                time: new Date(),
                 user: this.user,
                 msg: $('#m').val(),
                 color: this.color
@@ -52,6 +52,7 @@
                         .html(data.msg)
                     )
                 );
+                $('html, body').scrollTop($(document).height() - $(window).height(), 'slow');
             });
         },
         initUser: function () {
@@ -63,12 +64,6 @@
                     $('#user-wrapper').hide();
                 }, this));
             }
-        },
-        getTimeString: function (time) {
-            var t = new Date(time);
-            return '[' +
-                (t.getHours() < 10 ? '0' + t.getHours() : t.getHours()) + ':' +
-                (t.getMinutes() < 10 ? '0' + t.getMinutes() : t.getMinutes()) + '] ';
         },
         colorChooser: function(ele) {
                 this.color = $(ele).css('background-color');

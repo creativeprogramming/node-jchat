@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
-            all: ['package.json', 'Gruntfile.js', 'index.js', 'public/js/*.js', 'lib/*.js', '!public/js/*.min.js'],
+            all: ['*.json', 'Gruntfile.js', 'index.js', 'public/js/*.js', 'lib/*.js', '!public/js/*.min.js'],
             options: {
                 globals: {
                     'jQuery': true,

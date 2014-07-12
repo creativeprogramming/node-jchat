@@ -22,4 +22,4 @@ to run js hinting, uglifing and js and css minifying, just run
 
     grunt
 
-still under construction
+The chat alone ist running, but still missing the joomla part
