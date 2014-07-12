@@ -72,8 +72,18 @@
         },
         colorChooser: function(ele) {
                 this.color = $(ele).css('background-color');
-                $('.bold').removeClass('bold');
-                $(ele).addClass('bold');
+                $('#m').css('color', this.color);
+                var w = $(ele).width();
+                var h = $(ele).height();
+                $(ele).animate({
+                    width: w + 2,
+                    height: h + 2,
+                }, {
+                    duration: 200
+                }).animate({
+                    width: w,
+                    height: h
+                }, 200);
         }
     };
 
