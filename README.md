@@ -2,7 +2,7 @@
 
 * * *
 
-[<img src="https://travis-ci.org/pfitzer/node-jChat.svg?branch=master">](https://travis-ci.org/pfitzer/node-jChat) [<img src="https://david-dm.org/pfitzer/node-jChat.png">](https://david-dm.org/pfitzer/node-jChat)
+[<img src="https://travis-ci.org/pfitzer/node-jchat.svg?branch=master">](https://travis-ci.org/pfitzer/node-jchat) [<img src="https://david-dm.org/pfitzer/node-jchat.png">](https://david-dm.org/pfitzer/node-jchat)
 
 #### node.js chat module for joomla cms
 
