@@ -1,6 +1,6 @@
 {
   "name": "jchat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A node chat module for joomla CMS",
   "main": "index.js",
   "scripts": {
