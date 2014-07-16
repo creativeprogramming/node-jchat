@@ -16,6 +16,7 @@ app.get('/', function (req, res) {
 });
 
 io.on('connection', function (socket) {
+    var users = {};
     jCache.clearCache();
     Object.keys(jCache.get()).forEach(function(i) {
         socket.emit('chat message', jCache.get()[i]);
@@ -35,17 +36,18 @@ io.on('connection', function (socket) {
     });
 
     socket.on('connected', function (msg) {
+        users[socket.id] = msg.user;
         msg.msg = msg.user + ' has joined';
         msg.time = formatDate(msg.time, config.timeformat);
         msg.user = 'system';
         io.emit('chat message', msg);
     });
 
-    socket.on('disconnected', function (msg) {
-        msg.msg = msg.user + ' has left';
-        msg.time = formatDate(msg.time, config.timeformat);
+    socket.on('disconnect', function() {
+        var msg = {};
+        msg.msg = users[socket.id] + ' has left';
         msg.user = 'system';
+        msg.time = formatDate(msg.time, config.timeformat);
         io.emit('chat message', msg);
-        console.log('disconnected');
     });
 });

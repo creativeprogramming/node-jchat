@@ -9,9 +9,8 @@
 
         return this.each(function () {
             var c = new Chat();
-            console.log($('#colorChooser span'));
             $('#colorChooser span').click(function() {
-                $('.colorbox').show();
+                $('.colors').toggle('slow');
             });
             $('.colorbox').click(function() {
                 c.colorChooser(this);
@@ -30,7 +29,6 @@
 
         this.initUser();
         this.initChat();
-        this.disconnect();
     };
 
     Chat.prototype = {
@@ -90,13 +88,6 @@
                 width: w,
                 height: h
             }, 200);
-        },
-        disconnect: function() {
-            $(window).on('beforeunload' ,function() {
-                this.socket.emit('disconnected', {
-                    user: this.user
-                });
-            });
         }
     };
 

@@ -22,6 +22,18 @@ header {
     font-weight: bold;
 }
 
+header h1 {
+    float:left;
+}
+
+header #tools {
+    display: block;
+    position: relative;
+    top:70px;
+    width: 300px;
+    float:right;
+}
+
 footer {
     top: auto;
     bottom: 0;
@@ -117,7 +129,6 @@ section#content {
 }
 
 .colors {
-    width: 60%;
     margin: 20px 0;
     display: none;
 }
