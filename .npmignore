@@ -2,3 +2,4 @@
 .idea
 .travis.yml
 Gruntfile.js
+tests/
