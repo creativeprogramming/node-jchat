@@ -13,6 +13,7 @@
             <label for="name">Username</label>
             <input type="text" id="name" autocomplete="off" /><button>Send</button>
         </form>
+        <div class="error red">username is required</div>
     </div>
 </div>
 <section id="content">
@@ -24,17 +25,20 @@
     <form id="chatForm" action="">
         <input id="m" autocomplete="off" /><button>Send</button>
     </form>
-    <div class="colors">
-        <div class="colorbox red"></div>
-        <div class="colorbox yellow"></div>
-        <div class="colorbox green"></div>
-        <div class="colorbox limegreen"></div>
-        <div class="colorbox blue"></div>
-        <div class="colorbox orange"></div>
-        <div class="colorbox black"></div>
-        <div class="colorbox gray"></div>
-        <div class="colorbox darkblue"></div>
-        <div class="colorbox cyan"></div>
+    <div id="colorChooser">
+        <span>change font color</span>
+        <div class="colors">
+            <div class="colorbox red"></div>
+            <div class="colorbox yellow"></div>
+            <div class="colorbox green"></div>
+            <div class="colorbox limegreen"></div>
+            <div class="colorbox blue"></div>
+            <div class="colorbox orange"></div>
+            <div class="colorbox black"></div>
+            <div class="colorbox gray"></div>
+            <div class="colorbox darkblue"></div>
+            <div class="colorbox cyan"></div>
+        </div>
     </div>
 </footer>
 <script src="/socket.io/socket.io.js"></script>

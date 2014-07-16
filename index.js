@@ -27,10 +27,25 @@ io.on('connection', function (socket) {
         msg: config.welcomemsg
     });
 
-    socket.on('chat message', function (msg, user) {
+    socket.on('chat message', function (msg) {
         msg.msg = jchat.BBcode(msg.msg);
         msg.time = formatDate(msg.time, config.timeformat);
         jCache.set(msg);
         io.emit('chat message', msg);
+    });
+
+    socket.on('connected', function (msg) {
+        msg.msg = msg.user + ' has joined';
+        msg.time = formatDate(msg.time, config.timeformat);
+        msg.user = 'system';
+        io.emit('chat message', msg);
+    });
+
+    socket.on('disconnected', function (msg) {
+        msg.msg = msg.user + ' has left';
+        msg.time = formatDate(msg.time, config.timeformat);
+        msg.user = 'system';
+        io.emit('chat message', msg);
+        console.log('disconnected');
     });
 });
