@@ -5,7 +5,7 @@ var io = require('socket.io')(server);
 var formatDate = require('dateformat');
 var config = require('./config.json');
 var jchat = require('./lib/jchat');
-var cache = require('./lib/cache');
+var cache = require('pcache');
 var jCache = new cache(config.cachetime);
 
 server.listen(config.port);
@@ -17,9 +17,9 @@ app.get('/', function (req, res) {
 
 io.on('connection', function (socket) {
     var users = {};
-    jCache.clearCache();
-    Object.keys(jCache.get()).forEach(function(i) {
-        socket.emit('chat message', jCache.get()[i]);
+    jCache.keys().forEach(function(i) {
+        console.log(i);
+        socket.emit('chat message', jCache.get(i));
     });
 
     socket.emit('chat message', {

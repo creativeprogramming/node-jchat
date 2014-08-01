@@ -29,7 +29,6 @@ header h1 {
 header #tools {
     display: block;
     position: relative;
-    top:70px;
     width: 300px;
     float:right;
 }
@@ -129,7 +128,7 @@ section#content {
 }
 
 .colors {
-    margin: 20px 0;
+    width: 110px;
     display: none;
 }
 
