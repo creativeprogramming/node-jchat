@@ -18,7 +18,6 @@ app.get('/', function (req, res) {
 io.on('connection', function (socket) {
     var users = {};
     jCache.keys().forEach(function(i) {
-        console.log(i);
         socket.emit('chat message', jCache.get(i));
     });
 
@@ -31,7 +30,7 @@ io.on('connection', function (socket) {
     socket.on('chat message', function (msg) {
         msg.msg = jchat.BBcode(msg.msg);
         msg.time = formatDate(msg.time, config.timeformat);
-        jCache.set(msg);
+        jCache.set(new Date().getTime(), msg);
         io.emit('chat message', msg);
     });
 
